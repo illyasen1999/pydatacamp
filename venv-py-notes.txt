@@ -1,0 +1,5 @@
+When in a Virtual Environment in Python usually the packages that you've 
+installed previously are not available in the venv so you need to install them again
+
+linux:
+> python3 -m pip install <package-name>
