@@ -11,6 +11,8 @@ I want to thank 🇵🇭 Data Engineering Pilipinas 📊 for this opportunity to
 - Becoming good at Data
 - Work on projects
 - Expand knowledge about Data
+- Learn Python and Jupyter Notebook
+- Create Visualizations
 
 ## Credits:
 - [Data Engineering Pilipinas](https://dataengineering.ph/)
