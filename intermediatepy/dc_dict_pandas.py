@@ -94,6 +94,59 @@ def py_dictionary_2():
     # Print europe_3
     print(europe_3)
 
-def pandas_pandas():
-    # TODO: Intermediate Python: Pandas
-    pass
+def pandas_df_1():
+    # DICTIONARY TO DATAFRAME(1)
+    # Pre-defined lists
+    names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+    dr =  [True, False, False, False, True, True, True]
+    cpc = [809, 731, 588, 18, 200, 70, 45]
+
+    # Create dictionary my_dict with three key:value pairs: my_dict
+    my_dict = {
+        'country': names,
+        'drives_right': dr,
+        'cars_per_cap': cpc,
+    }
+
+    # Build a DataFrame cars from my_dict: cars
+    cars = pd.DataFrame(my_dict)
+
+    # Print cars
+    print(cars)
+
+
+def pandas_df_2():
+    # DICTIONARY TO DATAFRAME(2)
+    # Build cars DataFrame
+    names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+    dr =  [True, False, False, False, True, True, True]
+    cpc = [809, 731, 588, 18, 200, 70, 45]
+    cars_dict = { 'country':names, 'drives_right':dr, 'cars_per_cap':cpc }
+    cars = pd.DataFrame(cars_dict)
+    # print(cars)
+
+    # Definition of row_labels
+    row_labels = ['US', 'AUS', 'JPN', 'IN', 'RU', 'MOR', 'EG']
+
+    # Specify row labels of cars
+    cars.index = row_labels
+
+    # Print cars again
+    print(cars)
+
+def csv_to_dataframe_1():
+    # Import the cars.csv data: cars
+    cars = pd.read_csv('./data/cars.csv')
+
+    # Print out cars
+    print(cars)
+
+def csv_to_dataframe_2():
+    # Fix import by including index_col
+    cars = pd.read_csv('./data/cars.csv', index_col=0)
+
+    # Print out cars
+    print(cars)
+
+# TODO: Data Camp - Pandas Part 2
+    
