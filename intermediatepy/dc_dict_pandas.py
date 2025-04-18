@@ -148,5 +148,60 @@ def csv_to_dataframe_2():
     # Print out cars
     print(cars)
 
-# TODO: Data Camp - Pandas Part 2
+def square_brackets():
+    cars = pd.read_csv('./data/cars.csv', index_col=0)
+
+    # Print out country column as Pandas Series(w/o top label)
+    print(cars['country'])
+
+    # Print out country column as Pandas DataFrame(w/ top label)
+    print(cars[['country']])
+
+    # Print out DataFrame with country and drives_right columns
+    print(cars[['country', 'drives_right']])
     
+def square_brackets_2():
+    cars = pd.read_csv('./data/cars.csv', index_col = 0)
+
+    # Print out first 3 observations
+    print(cars[0:3])
+
+    # Print out fourth, fifth and sixth observation
+    print(cars[3:6])
+
+def loc_and_iloc_1():
+    cars = pd.read_csv('./data/cars.csv', index_col = 0)
+
+    # Print out observation for Japan
+    print(cars.loc['JPN'])
+    print(cars.iloc[2])
+    print(cars)
+
+    # Print out observations for Australia and Egypt
+    print(cars.loc[['AUS', 'EG']])
+    print(cars.iloc[[1, 6]])
+
+def loc_and_iloc_2():
+    cars = pd.read_csv('./data/cars.csv', index_col = 0)
+    # print(cars)
+    # Print out drives_right value of Morocco
+    print(cars.loc['MOR', 'drives_right'])
+    print(cars.iloc[-3, 2])
+
+    # Print sub-DataFrame
+    print(cars.loc[['RU', 'MOR'], ['country', 'drives_right']])
+
+def loc_and_iloc_3():
+
+    cars = pd.read_csv('./data/cars.csv', index_col = 0)
+
+    # Print out drives_right column as Series
+    print(cars.loc[:, 'drives_right'])
+
+    # Print out drives_right column as DataFrame
+    print(cars.loc[: ,['drives_right']])
+
+    # Print out cars_per_cap and drives_right as DataFrame
+    print(cars.loc[:, ['cars_per_cap', 'drives_right']])
+    print(cars.iloc[:, [0, 2]])
+
