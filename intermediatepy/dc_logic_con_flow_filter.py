@@ -102,3 +102,6 @@ def if_elif_else():
         print("pretty small.")
 
 # TODO: Intermediate Python - Filtering pandas DataFrames
+
+def test_code_spaces():
+    print("This is one code spaces")
