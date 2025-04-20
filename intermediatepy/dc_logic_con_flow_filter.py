@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 def comparisons():
     # Comparison of booleans
@@ -101,7 +102,48 @@ def if_elif_else():
     else :
         print("pretty small.")
 
-# TODO: Intermediate Python - Filtering pandas DataFrames
+def drives_right_1():
+    cars = pd.read_csv('./data/cars.csv', index_col=0)
 
-def test_code_spaces():
-    print("This is one code spaces")
+    # Extract drives_right column as Series: dr
+    dr = cars['drives_right']
+    print(dr)
+
+    # Use dr to subset cars: sel
+    sel = cars[dr]
+
+    # Print sel
+    print(sel)
+
+def drives_right_2():
+    cars = pd.read_csv('./data/cars.csv', index_col=0)
+
+    # Convert code to a one-liner
+    sel = cars[cars['drives_right']]
+
+    # Print sel
+    print(sel)
+
+def cars_per_capita_1():
+    cars = pd.read_csv('./data/cars.csv', index_col=0)
+
+    # Create car_maniac: observations that have a cars_per_cap over 500
+    cpc = cars['cars_per_cap']
+    many_cars = cpc > 500
+    car_maniac = cars[many_cars]
+
+    # Print car_maniac
+    print(car_maniac)
+
+def cars_per_capita_2():
+    cars = pd.read_csv('./data/cars.csv', index_col=0)
+
+    # Create medium: observations with cars_per_cap between 100 and 500
+    cpc = cars['cars_per_cap']
+    between = np.logical_and(cpc > 100, cpc < 500)
+    medium = cars[between]
+
+
+    # Print medium
+    print(medium)
+

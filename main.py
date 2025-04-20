@@ -2,9 +2,10 @@
 # import intermediatepy.dc_matplotlib as dcm
 # import intermediatepy.dc_dict_pandas as dcdp
 import intermediatepy.dc_logic_con_flow_filter as dclcf
+import intermediatepy.dc_loops as dclps
 
 def main():
-    dclcf.comparisons()
+    dclps.loops_with_conditionals()
 
 
 if __name__ == "__main__":
